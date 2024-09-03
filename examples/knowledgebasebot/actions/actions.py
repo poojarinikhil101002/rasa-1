@@ -1,5 +1,5 @@
-from rasa_sdk.knowledge_base.storage import InMemoryKnowledgeBase
-from rasa_sdk.knowledge_base.actions import ActionQueryKnowledgeBase
+from rasa_sdk.knowledge_base.storage import InMemoryKnowledgeBase #type:ignore
+from rasa_sdk.knowledge_base.actions import ActionQueryKnowledgeBase #type:ignore
 
 
 class ActionMyKB(ActionQueryKnowledgeBase):
@@ -9,8 +9,7 @@ class ActionMyKB(ActionQueryKnowledgeBase):
 
         # overwrite the representation function of the hotel object
         # by default the representation function is just the name of the object
-        knowledge_base.set_representation_function_of_object(
-            "hotel", lambda obj: obj["name"] + " (" + obj["city"] + ")"
-        )
-
+        # knowledge_base.set_representation_function_of_object(
+        #     "service", lambda obj: obj["name"] + ":" + obj["description"]
+        # )
         super().__init__(knowledge_base)

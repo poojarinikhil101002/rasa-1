@@ -10,10 +10,8 @@ entities:
   - object_type
   - mention
   - attribute
-  - hotel
-  - restaurant
-  - cuisine
-  - city
+  - service
+
 
 slots:
   object_type:
@@ -34,31 +32,12 @@ slots:
     mappings:
     - type: from_entity
       entity: attribute
-  hotel:
+  service:
     type: text
     influence_conversation: false
     mappings:
     - type: from_entity
-      entity: hotel
-  restaurant:
-    type: text
-    influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: restaurant
-  city:
-    type: text
-    influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: city
-  cuisine:
-    type: text
-    influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: cuisine
-
+      entity: service
 actions:
 - action_query_knowledge_base
 
